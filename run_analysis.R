@@ -7,13 +7,13 @@
 # 3. Merge all relevant data from the test and train sources
 # 4. Subset the data to only include mean and std measures
 # 5. Include proper titles and descriptions for measures
-# 6. Export a historical csv, UCI_HAR_meanstd_summary.csv, were the source data is summarized
-#       by subject, activity_name and a average of all the mean and std measures
-#       subset in step #4
+# 6. Export a historical text file, UCI_HAR_meanstd_summary.txt, where the source data 
+#       is summarized by subject, activity_name and a average of all the mean and std 
+#       measures subset in step #4
 # 7. The unzipped file will be cleaned after completion
 #
 # The source zip file "UCI HAR Dataset.zip" is 61,091 KB.
-# The output file, "UCI_HAR_meanstd_summary.csv", is 218 KB.
+# The output file, "UCI_HAR_meanstd_summary.txt", is 218 KB.
 # 
 # Runtimes
 # Download time: varies based on internet connection (61 MB)
@@ -109,7 +109,7 @@ X_summary_wide <- ddply(X_meanstd2, c("Subject","Activity"),
                         numcolwise(mean))
 X_summary_wide$Activity_Name <- NULL
 
-write.csv(X_summary_wide,file = "UCI_HAR_meanstd_summary.csv", row.names = FALSE)
+write.table(X_summary_wide,file = "UCI_HAR_meanstd_summary.txt", row.names = FALSE, sep = "\t")
 
 
 # Finally I deleted the unzipped file to leave the working directory as clean as possible
@@ -130,6 +130,6 @@ unlink("UCI HAR Dataset", recursive = TRUE)
 # colnames(X_melt)[4] <- c("Value")
 # X_summary <- ddply(X_melt, c("Subject","Activity_Name","Variable"), 
 #                         summarise, Value_mean = mean(Value))
-# write.csv(X_summary,file = "tidylong.csv", row.names = FALSE)
+# write.file(X_summary,file = "tidylong.txt", row.names = FALSE)
 
 

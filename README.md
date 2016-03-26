@@ -10,4 +10,4 @@ CodeBook.md - Listing of assumptions, process, output, runtimes,
         data dictionary, notes and references and license information
         for executing run_analysis.R
 
-UCI_HAR_meanstd_summary.csv - The output of run_analysis.R script
+UCI_HAR_meanstd_summary.txt - The output of run_analysis.R script

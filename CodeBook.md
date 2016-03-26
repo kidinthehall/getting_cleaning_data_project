@@ -27,16 +27,16 @@ By running the "run_analysis.R" script, the following actions are executed:
         3. Merge all relevant data from the test and train sources
         4. Subset the data to only include mean and std measures
         5. Include proper titles and descriptions for measures
-        6. Export a wide csv, UCI_HAR_meanstd_summary.csv, were the source data
-                is summarized by subject, activity_name and a average of all the
-                mean and std measures subset in step #4
+        6. Export a wide tab delimited text file, UCI_HAR_meanstd_summary.txt,
+                were the source data is summarized by subject, activity_name 
+                and a average of all the mean and std measures subset in step #4
         7. The unzipped file will be cleaned after completion
 
 
 OUTPUT
 =========================================================================================
 The source zip file "UCI HAR Dataset.zip" is 61,091 KB.
-The output file, "UCI_HAR_meanstd_summary.csv", is 218 KB.
+The output file, "UCI_HAR_meanstd_summary.txt", is 218 KB.
 
 
 RUNTIMES
